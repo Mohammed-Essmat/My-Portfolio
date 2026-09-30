@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Mohammed Essmat | Software Engineer &amp; Flutter Developer</title>
     <style>
         * {
             margin: 0;
@@ -12,11 +12,11 @@
         }
 
         :root {
-            --dark-blue: #0a192f;
-            --darker-blue: #020c1b;
-            --accent-blue: #64ffda;
-            --light-blue: #8892b0;
-            --lightest-blue: #ccd6f6;
+            --dark-blue: #050d1f;
+            --darker-blue: #020817;
+            --accent-blue: #38bdf8;
+            --light-blue: #8fa3c7;
+            --lightest-blue: #dbe7ff;
         }
 
         :root[data-theme="light"] {
@@ -42,7 +42,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0a192f 0%, #112240 50%, #0a192f 100%);
+            background: linear-gradient(135deg, #050d1f 0%, #0a1a3a 50%, #050d1f 100%);
             z-index: -2;
         }
 
@@ -53,9 +53,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(100, 255, 218, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(100, 255, 218, 0.05) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
             animation: pulse 15s ease-in-out infinite;
+        }
+
+        /* Tech grid overlay */
+        .background-gradient::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+            background-size: 48px 48px;
+            -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
+            mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
         }
 
         @keyframes pulse {
@@ -68,11 +81,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 25, 47, 0.85);
+            background: rgba(5, 13, 31, 0.85);
             backdrop-filter: blur(10px);
             padding: 1.5rem 5%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
         }
 
         nav ul {
@@ -152,6 +165,16 @@
             line-height: 1.1;
         }
 
+        .hero .hero-role {
+            font-family: 'Courier New', monospace;
+            font-size: 1.6rem;
+            color: var(--accent-blue);
+            margin: -1rem 0 2rem;
+            text-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+        }
+
+        .hero .hero-role::before { content: '> '; opacity: 0.7; }
+
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 3rem;
@@ -185,7 +208,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             transition: left 0.3s;
         }
 
@@ -195,7 +218,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
         }
 
         .button-group {
@@ -218,12 +241,12 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(100, 255, 218, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.3);
             border-radius: 50%;
             color: var(--accent-blue);
             transition: all 0.3s;
             text-decoration: none;
-            background: rgba(100, 255, 218, 0.05);
+            background: rgba(56, 189, 248, 0.05);
         }
 
         .social-icon svg {
@@ -234,10 +257,10 @@
 
         .social-icon:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
             border-color: var(--accent-blue);
             color: var(--lightest-blue);
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
         }
 
         /* Sections */
@@ -292,7 +315,7 @@
             width: 100%;
             max-width: 420px;
             aspect-ratio: 2 / 3;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             border-radius: 8px;
             border: 2px solid var(--accent-blue);
             display: flex;
@@ -311,7 +334,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(100, 255, 218, 0.2) 0%, transparent 100%);
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, transparent 100%);
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -322,7 +345,7 @@
 
         .profile-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 40px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.3);
         }
 
         /* Skills Section */
@@ -346,10 +369,10 @@
         }
 
         .skill-category {
-            background: linear-gradient(135deg, rgba(17, 34, 64, 0.9) 0%, rgba(10, 25, 47, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 26, 58, 0.9) 0%, rgba(5, 13, 31, 0.9) 100%);
             padding: 2.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(100, 255, 218, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
@@ -362,7 +385,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
             transition: left 0.5s;
         }
 
@@ -372,26 +395,26 @@
 
         .skill-category:hover {
             border-color: var(--accent-blue);
-            box-shadow: 0 20px 60px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 20px 60px rgba(56, 189, 248, 0.3);
             transform: translateY(-10px);
         }
 
         .skill-icon {
             width: 70px;
             height: 70px;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
             margin: 0 auto 1.5rem;
-            border: 2px solid rgba(100, 255, 218, 0.2);
+            border: 2px solid rgba(56, 189, 248, 0.2);
             transition: all 0.3s;
         }
 
         .skill-category:hover .skill-icon {
-            background: rgba(100, 255, 218, 0.2);
+            background: rgba(56, 189, 248, 0.2);
             border-color: var(--accent-blue);
             transform: rotate(5deg) scale(1.1);
         }
@@ -412,27 +435,27 @@
         }
 
         .skill-tag {
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             color: var(--accent-blue);
             padding: 0.6rem 1.2rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid rgba(100, 255, 218, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             transition: all 0.3s;
             font-weight: 500;
         }
 
         .skill-tag:hover {
-            background: rgba(100, 255, 218, 0.2);
+            background: rgba(56, 189, 248, 0.2);
             border-color: var(--accent-blue);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
         }
 
         .skill-level {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            border-top: 1px solid rgba(56, 189, 248, 0.1);
         }
 
         .skill-level-label {
@@ -446,7 +469,7 @@
         .skill-level-bar {
             width: 100%;
             height: 6px;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             border-radius: 10px;
             overflow: hidden;
         }
@@ -469,15 +492,15 @@
         .skill-item:hover {
             transform: translateY(-5px);
             border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
-            background: rgba(100, 255, 218, 0.1);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+            background: rgba(56, 189, 248, 0.1);
         }
 
         .skill-item {
-            background: rgba(100, 255, 218, 0.05);
+            background: rgba(56, 189, 248, 0.05);
             padding: 1.5rem;
             border-radius: 8px;
-            border: 1px solid rgba(100, 255, 218, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.1);
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -493,8 +516,8 @@
         .skill-item:hover {
             transform: translateY(-5px);
             border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
-            background: rgba(100, 255, 218, 0.1);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+            background: rgba(56, 189, 248, 0.1);
         }
 
         /* Projects Section */
@@ -516,10 +539,10 @@
         }
 
         .certificate-card {
-            background: rgba(17, 34, 64, 0.8);
+            background: rgba(10, 26, 58, 0.8);
             border-radius: 8px;
             padding: 2rem;
-            border: 1px solid rgba(100, 255, 218, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.1);
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -547,21 +570,21 @@
         .certificate-card:hover {
             transform: translateY(-10px);
             border-color: var(--accent-blue);
-            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
-            background: rgba(17, 34, 64, 1);
+            box-shadow: 0 15px 40px rgba(56, 189, 248, 0.2);
+            background: rgba(10, 26, 58, 1);
         }
 
         .certificate-icon {
             width: 60px;
             height: 60px;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(100, 255, 218, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         .certificate-card h3 {
@@ -594,7 +617,7 @@
             display: inline-block;
             margin-top: 1rem;
             padding: 0.5rem 1rem;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             border: 1px solid var(--accent-blue);
             border-radius: 4px;
             color: var(--accent-blue);
@@ -605,8 +628,8 @@
         }
 
         .certificate-badge:hover {
-            background: rgba(100, 255, 218, 0.2);
-            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+            background: rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
         }
 
         /* Projects Section */
@@ -619,10 +642,10 @@
         }
 
         .project-card {
-            background: rgba(17, 34, 64, 0.8);
+            background: rgba(10, 26, 58, 0.8);
             border-radius: 8px;
             padding: 2.5rem;
-            border: 1px solid rgba(100, 255, 218, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.1);
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -648,8 +671,8 @@
         .project-card:hover {
             transform: translateY(-10px);
             border-color: var(--accent-blue);
-            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
-            background: rgba(17, 34, 64, 1);
+            box-shadow: 0 15px 40px rgba(56, 189, 248, 0.2);
+            background: rgba(10, 26, 58, 1);
         }
 
         .project-number {
@@ -709,8 +732,8 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem;
-            background: rgba(17, 34, 64, 0.5);
-            border: 1px solid rgba(100, 255, 218, 0.15);
+            background: rgba(10, 26, 58, 0.5);
+            border: 1px solid rgba(56, 189, 248, 0.15);
             border-radius: 8px;
             transition: all 0.3s;
         }
@@ -718,7 +741,7 @@
         .contact-item:hover {
             transform: translateY(-3px);
             border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
         }
 
         .contact-icon {
@@ -727,10 +750,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(100, 255, 218, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.3);
             border-radius: 50%;
             color: var(--accent-blue);
-            background: rgba(100, 255, 218, 0.05);
+            background: rgba(56, 189, 248, 0.05);
             flex-shrink: 0;
         }
 
@@ -783,8 +806,8 @@
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            background: rgba(17, 34, 64, 0.5);
-            border: 1px solid rgba(100, 255, 218, 0.2);
+            background: rgba(10, 26, 58, 0.5);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             border-radius: 5px;
             font-size: 1rem;
             color: var(--lightest-blue);
@@ -795,8 +818,8 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-blue);
-            box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
-            background: rgba(17, 34, 64, 0.8);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            background: rgba(10, 26, 58, 0.8);
         }
 
         .form-group input::placeholder,
@@ -836,7 +859,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: rgba(100, 255, 218, 0.1);
+            background: rgba(56, 189, 248, 0.1);
             transition: left 0.3s;
         }
 
@@ -846,7 +869,7 @@
 
         .submit-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
         }
 
         /* Footer */
@@ -855,7 +878,7 @@
             padding: 3rem 5%;
             color: var(--light-blue);
             font-size: 0.9rem;
-            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            border-top: 1px solid rgba(56, 189, 248, 0.1);
         }
 
         /* Animations */
@@ -898,6 +921,8 @@
                 font-size: 2rem;
             }
 
+            .hero .hero-role { font-size: 1.2rem; }
+
             nav ul {
                 gap: 1.5rem;
             }
@@ -936,6 +961,7 @@
             .hero { padding: 0 4%; }
             .hero h1 { font-size: 2.2rem; }
             .hero h2 { font-size: 1.4rem; }
+            .hero .hero-role { font-size: 1rem; margin-top: -0.5rem; }
             .hero p { font-size: 1rem; margin-bottom: 2rem; }
             .cta-button { padding: 0.9rem 1.4rem; font-size: 0.95rem; }
             .social-icons { margin-top: 1rem; }
@@ -956,7 +982,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="https://drive.google.com/file/d/1l1R09TNfZLkmkqUxpm60fuYGZfesWqph/view?usp=sharing" target="_blank" rel="noopener">CV</a></li>
+            <li><a href="Mohammed_Essmat_CV.pdf" target="_blank" rel="noopener">CV</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -970,7 +996,8 @@
             <div class="hero-label">Hi, my name is</div>
             <h1>Mohammed Essmat.</h1>
             <h2>Software Engineer.</h2>
-            <p>I'm a software engineer specializing in building exceptional digital experiences. Currently, I'm focused on creating accessible, human-centered products.</p>
+            <div class="hero-role">Flutter Developer</div>
+            <p>I build scalable mobile apps and backend systems with Flutter, Python and FastAPI, from clean architecture and secure APIs to polished, responsive user experiences.</p>
             <a href="#projects" class="cta-button">View My Work</a>
             <div class="social-icons">
                 <a class="social-icon" href="https://github.com/Mohammed-Essmat" target="_blank" rel="noopener" aria-label="GitHub">
@@ -983,7 +1010,7 @@
                         <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18.34H6V9.75h2.34v8.59ZM7.17 8.67a1.36 1.36 0 1 1 0-2.72 1.36 1.36 0 0 1 0 2.72ZM18 18.34h-2.33v-4.64c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.72H10V9.75h2.24v1.17h.03c.31-.58 1.06-1.2 2.18-1.2 2.33 0 2.76 1.54 2.76 3.55v5.07Z"/>
                     </svg>
                 </a>
-                <a class="social-icon" href="mailto:essmatmohamed146@gmail.com" aria-label="Email">
+                <a class="social-icon" href="mailto:mohammed.essmat@outlook.com" aria-label="Email">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
                     </svg>
@@ -999,7 +1026,8 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Mohamed Esmat is a dedicated software engineer with strong expertise in C, C++, and Flutter development, known for crafting efficient, scalable, and clean code. His work reflects deep technical understanding across system programming, embedded logic, and AI integration, with a focus on creating seamless, high-performance software solutions. He combines analytical precision with creative problem-solving, consistently delivering solutions that balance robust architecture and user-centered functionality. Mohamed’s technical curiosity and commitment to excellence make him an engineer who not only builds reliable systems but also pushes them toward innovation and real-world impact.</p>
+                    <p>Mohammed Essmat is a Software Engineering graduate (ICT, NCTU, 2026) who builds scalable mobile and backend systems. He works with Flutter and Dart on the front end and Python, FastAPI and MongoDB on the back end, backed by a solid foundation in algorithms, OOP and system design.</p>
+                    <p>He delivered <strong>Shabkti</strong>, a production Flutter app with a FastAPI backend and MikroTik router integration, and led a team of four to build a computer-vision Virtual Mouse. He cares about secure code, clean architecture and shipping reliable products.</p>
                 </div>
                 <div class="profile-image">
                     <img src="https://github.com/Mohammed-Essmat/Mohammed-Essmat/blob/687e8e52e79ad84243bbd4f53c559525ab158ae2/WhatsApp%20Image%202025-10-31%20at%2017.32.33_3b97499c.jpg?raw=true" alt="Profile photo of Mohammed Essmat" style="width:100%; height:100%; object-fit:cover;">
@@ -1018,18 +1046,23 @@
                     <div class="skill-icon">💻</div>
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
                         <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python (OOP)</span>
                         <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">SQL</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Services</h3>
+                    <div class="skill-icon">🧩</div>
+                    <h3>Frameworks</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Machine Learning</span>
                         <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        <span class="skill-tag">Tkinter</span>
                     </div>
                 </div>
             </div>
@@ -1042,6 +1075,18 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-number">01.</div>
+                <h3>Shabkti – Graduation Project (2025–2026)</h3>
+                <p>A WiFi data-package subscription system: a Flutter app (20+ screens, Arabic/English, dark mode) with a FastAPI backend and MikroTik router integration. It includes JWT auth with email OTP, an admin dashboard for payments and hotspot users, and a security audit that fixed 10 vulnerabilities.</p>
+                <div class="project-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">MikroTik</span>
+                </div>
+                <a href="https://github.com/Mohammed-Essmat/shabkti" target="_blank" rel="noopener" class="certificate-badge">View Repo</a>
+            </div>
+            <div class="project-card">
+                <div class="project-number">02.</div>
                 <h3>Virtual Mouse – June 2024</h3>
                 <p>I led the Virtual Mouse Project team at New Cairo Technological University. We built a Python-based virtual mouse using computer vision techniques to help users control the cursor easily and improve their experience. We also created a simple, user-friendly GUI for the mouse.</p>
                 <div class="project-tags">
@@ -1050,16 +1095,6 @@
                     <span class="tag">GUI</span>
                 </div>
                 <a href="https://github.com/Mohammed-Essmat/Virtual-mouse" target="_blank" rel="noopener" class="certificate-badge">View Repo</a>
-            </div>
-            <div class="project-card">
-                <div class="project-number">02.</div>
-                <h3>Hadieaty Mobile App (April 2025)</h3>
-                <p>Hadieaty is a mobile app for groups of friends to remember each other's birthdays. The birthday owner maintains a wish list visible to friends, who can choose gifts without the owner knowing. Friends can see each other's chosen gifts to avoid duplicates, suggest gift ideas, and arrange a party.</p>
-                <div class="project-tags">
-                    <span class="tag">Flutter</span>
-                    <span class="tag">Dart</span>
-                    <span class="tag">Mobile</span>
-                </div>
             </div>
         </div>
     </section>
@@ -1072,7 +1107,7 @@
             <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <a class="contact-item contact-link" href="mailto:essmatmohamed146@gmail.com" aria-label="Email">
+                    <a class="contact-item contact-link" href="mailto:mohammed.essmat@outlook.com" aria-label="Email">
                         <span class="contact-icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
@@ -1080,7 +1115,7 @@
                         </span>
                         <div>
                             <div class="contact-label">Email</div>
-                            <div class="contact-value">essmatmohamed146@gmail.com</div>
+                            <div class="contact-value">mohammed.essmat@outlook.com</div>
                         </div>
                     </a>
                     <a class="contact-item contact-link" href="https://wa.me/201032638716" target="_blank" rel="noopener" aria-label="WhatsApp">
@@ -1117,7 +1152,7 @@
     </section>
 
     <footer>
-        <p>Designed & Built by Your Name • 2025</p>
+        <p>Designed & Built by Mohammed Essmat • 2026</p>
     </footer>
 
     <script>
